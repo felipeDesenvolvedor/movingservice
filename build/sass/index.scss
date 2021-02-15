@@ -62,7 +62,19 @@
             z-index: 1;
 
             .top__item {
-                background-color:red;
+                background-color:#1e324a;
+
+                &:first-child {
+                    transform:rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    display: none;
+                }                
+
+                &:last-child {
+                    transform:translateY(-170%) rotate(-45deg);
+                }
             }
         }
         
@@ -100,7 +112,8 @@
                 width: 20px;
                 height: 3px;
                 background-color: #fff;
-                margin-bottom: 2px
+                margin-bottom: 2px;
+                transition:transform .3s;
             }
         }
     }
