@@ -1,9 +1,13 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    cssmin = require('gulp-cssmin');
+    cssmin = require('gulp-cssmin'),
+    uglify = require('gulp-uglify'),
+    babel = require("gulp-babel");
 
-var saaspath = "build/sass/*.scss";    
-var csspath  = "assets/css";
+var saaspath  = "build/sass/*.scss";    
+var csspath   = "assets/css";
+var jspathEs6 = "build/js/*.js";
+var jspath    = "assets/js";
 
 
 gulp.task('watch', function(){
@@ -14,6 +18,15 @@ gulp.task('watch', function(){
     .pipe(gulp.dest(csspath));
   });
   
+  gulp.watch(jspathEs6).on('change', function() {
+    gulp.src(jspathEs6)
+      .pipe(babel({ presets: ["@babel/preset-env"] }))
+      .pipe(uglify())
+      .pipe(uglify().on('error', function(e){
+              console.log(e);
+        }))
+      .pipe(gulp.dest(jspath));
+  });
 });
 
 gulp.task('sass', function () {
