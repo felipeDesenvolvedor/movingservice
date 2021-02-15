@@ -58,10 +58,6 @@
             display:none;
         }
         
-        &__nav--aberto {
-            width: 20px;
-        }
-
         &__menu {
             transition:all 200ms;
         }
@@ -87,6 +83,9 @@
 
         &__nav {
             display: inline-block;
+            width: 20px;
+            height: 15px;
+            position: relative;
         }
 
         &__amburguer__lista {
