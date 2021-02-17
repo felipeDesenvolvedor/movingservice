@@ -1,0 +1,199 @@
+@import 'partial.scss';
+
+.top {
+    background-color:$blue-default;
+    color:$white;
+    font-size:16px;
+    font-family: 'Helvetica', sans-serif;
+
+
+    // Mobile
+    @media (max-width:$desktop) {
+        padding:20px 10px;        
+
+        &__container {
+           align-items: center;
+        }
+        
+        //Top Data b
+        &__data__b {
+            display:none;
+        }
+
+        &__nav {
+            display: inline-block;
+            width: 20px;
+            height: 15px;
+            position: relative;
+        }
+
+        &__nav--aberto &__menu {
+            
+            visibility: visible;
+            opacity: 1;
+            transition:opacity .3s;
+        }
+        
+        // Top Nav Menu
+        &__nav--aberto &__amburguer__lista {
+            position: absolute;
+            z-index: 1;
+
+            .top__item {
+                background-color:$blue-default;
+
+                &:first-child {
+                    transform:rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    display: none;
+                }                
+
+                &:last-child {
+                    transform:translateY(-170%) rotate(-45deg);
+                }
+            }
+        }
+        
+        // Top Menu
+        &__menu{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            visibility: hidden;
+            opacity: 0;
+            transition:opacity .3s;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            color:$blue-default;
+            letter-spacing: 1px;
+            background-color:rgba(255, 255, 255, 0.8);
+            position: absolute;
+            left:0;
+            top:0;
+            width: 100%;
+            height: 100%;
+
+            .top__item {
+                
+                &:first-child {
+                    margin-top:110px;
+                }
+
+                width:160px;
+                margin-bottom:10px;
+                padding-bottom:10px;
+                border-bottom: 1px solid $blue-default;
+            }
+        }
+
+        &__amburguer__lista {
+            display: inline-block;
+            
+            .top__item {
+                width: 20px;
+                height: 3px;
+                background-color: #fff;
+                margin-bottom: 2px;
+                transition:transform .3s;
+            }
+        }
+    }
+
+    // Tablet
+    @media (max-width:$mobile) {
+        &__container {
+          width: 320px;
+        }
+    }
+    
+    @media (min-width:$desktop) {
+        &__container {
+            width: 1200px;
+            position: relative;
+        }
+
+        &__menu {
+            .top {
+                &__item {
+                    padding:100px 0 44px 0;
+                    transition:color 300ms;
+                    
+                    &:not(:last-child) {
+                        margin-right: 80px;   
+                      }
+                }
+                
+                &__link:hover {
+                    color:lighten($color: $orange_default, $amount: 1.5);
+                }
+            }
+        }
+    }
+
+    &__container {
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+    }
+
+    &__truck {
+        width: 80px;
+        fill:$white;
+    }
+
+    &__link {
+        color:inherit;
+        text-decoration:none;
+    }
+
+    // Top Data a 
+    &__data__a {
+        display: flex;
+        align-items: center;
+        flex-basis: 260px;
+        justify-content: space-between;
+
+        .top__info {
+            font-size:14px;
+            font-weight: bold;
+            text-transform: uppercase;
+    
+            &:first-child {   
+                font-size:22px;
+            }
+        }
+    }
+
+    &__data__b {
+       position: absolute; 
+       right: 0;
+       top: 60px;
+       color:$orange_default;
+
+       .top__info {
+           &:first-child {               
+            &::after {
+                   content:'-';
+                   text-indent: -9999px;
+                   width: 1px;
+                   height: 100%;
+                   background:linear-gradient(to right, $white, $white) no-repeat left bottom / 1px 100%;
+                   display: inline-block;
+                   margin-left: 10px;
+                   padding-left:10px; 
+               }
+           }
+       }
+    }
+
+    &__menu {
+       display:flex;
+       align-items: center;
+       text-transform: uppercase;
+    }
+}
