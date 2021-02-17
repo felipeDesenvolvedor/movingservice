@@ -103,20 +103,8 @@
             }
         }
     }
-
-    // Tablet
-    @media (max-width:$mobile) {
-        &__container {
-          width: 320px;
-        }
-    }
-    
+ 
     @media (min-width:$desktop) {
-        &__container {
-            width: 1200px;
-            position: relative;
-        }
-
         &__menu {
             .top {
                 &__item {
@@ -139,6 +127,31 @@
       margin:0 auto;
       display:flex;
       justify-content:space-between;
+      
+      @media (max-width:$desktop) {
+        align-items: center;
+      }
+      
+        // Tablet
+      @media (min-width:$mobile) and (max-width:$tablete) {
+        width: 300px;
+      }
+      
+      @media (min-width:$tablete + 1) and (max-width:$desktop + 1) {  
+        width: 600px;
+      }
+
+      @media (min-width:$desktop + 2) and (max-width:$tablete_dektop - 1) {
+        width: 990px;
+      }
+
+      @media (min-width:$desktop + 2) and (max-width:$monitor) {
+        position: relative;
+      }
+      
+      @media (min-width:$tablete_dektop) and (max-width:$monitor) {
+        width: 1200px;
+      }
     }
 
     &__truck {
