@@ -189,16 +189,16 @@
        color:$orange_default;
 
        .top__info {
-           &:first-child {               
+           &:nth-child(2) {
+              
             &::after {
                    content:'-';
                    text-indent: -9999px;
+                   display: inline-block;
                    width: 1px;
                    height: 100%;
-                   background:linear-gradient(to right, $white, $white) no-repeat left bottom / 1px 100%;
-                   display: inline-block;
-                   margin-left: 10px;
-                   padding-left:10px; 
+                   background:linear-gradient(to right, $white, $white) repeat-x;
+                   margin:0 10px; 
                }
            }
        }
