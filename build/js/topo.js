@@ -4,9 +4,9 @@ const toggleElement = (element, className) => {
 
 const showMenu = () => {
     const menuAmburguer = document.querySelector('.js__amburguer');
-    const topContainer  = document.querySelector('.top__container');
+    const top  = document.querySelector('.top');
     
-    menuAmburguer.addEventListener('click', () => toggleElement(topContainer, 'top__nav--aberto'));
+    menuAmburguer.addEventListener('click', () => toggleElement(top, 'top__nav--aberto'));
 }
 
 document.addEventListener('DOMContentLoaded', () => showMenu());

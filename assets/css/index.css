@@ -1,0 +1,1 @@
+.top__nav--aberto~.overlay{visibility:visible;opacity:1}@media (max-width:990px){.overlay{visibility:hidden;opacity:0;transition:opacity .3s;background-color:rgba(255,255,255,.8);position:absolute;left:0;top:0;width:100%;height:100%;z-index:1}}

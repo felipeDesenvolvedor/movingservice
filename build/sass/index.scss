@@ -1,0 +1,21 @@
+@import 'partial.scss';
+
+.top__nav--aberto ~ .overlay{
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay {
+    @media (max-width:$desktop) { 
+        visibility: hidden;
+        opacity: 0;
+        transition:opacity .3s;
+        background-color:rgba(255, 255, 255, 0.8);
+        position: absolute;
+        left:0;
+        top:0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}
