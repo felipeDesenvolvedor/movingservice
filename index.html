@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/colors.css" />
     <link rel="stylesheet" href="assets/css/top.css" />
     <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/banner.css"/>
     <link rel="stylesheet" href="assets/css/index.css" />
 </head>
 <body class="body">
@@ -64,7 +65,14 @@
     <main>
         <section class="main__container">
             <div class="banner__container">
-                <img class="banner__img" src="/assets/img/banner-1.jpg" alt="Banner">
+                <img class="banner__img" 
+                    srcset="/assets/img/banner-mobile-1-600w.jpg 600w,
+                            /assets/img/banner-tablet-1-990w.jpg 990w,
+                            /assets/img/banner-desktop-1-1920w.jpg 1920w" 
+                    sizes="(min-width:320px) and (max-width:600px) 600px,
+                           (min-width:601px) and (max-width:990px) 990px,
+                           (min-width:991px) and (max-width:1920px) 1920px"
+                    src="/assets/img/banner-dektop-1-1920w.jpg" alt="Banner">
             </div>
         </section>    
     </main>
