@@ -1,1 +1,1 @@
-img{height:auto;max-width:100%}
+img{height:auto;max-width:100%}@media (max-width:990px){.banner__title{font-size:37px}}.banner__element:not(:first-child){margin-top:60px;display:inline-block}.banner__text{position:absolute;bottom:0;left:50%;transform:translateX(-50%);color:#fff;text-align:center;margin-top:60px}.banner__title{font-size:60px;font-weight:700;color:#f57b1b}.banner__btn{border:2px solid;padding:10px 30px;font-size:26px;text-transform:uppercase;transition:all .5s}.banner__btn:hover{background-color:#f57b1b;border-color:transparent;cursor:pointer}
