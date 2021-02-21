@@ -1,5 +1,9 @@
 @import 'partial.scss';
 
+.body {
+    font-family: 'Helvetica', sans-serif;
+}
+
 .top__nav--aberto ~ .overlay{
     visibility: visible;
     opacity: 1;
