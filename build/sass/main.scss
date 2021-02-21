@@ -1,6 +1,44 @@
 @import 'partial.scss';
 @import 'colors.scss';
 
+.banner{
+    &__element:not(:first-child) {
+        margin-top:60px;
+        display: inline-block;
+    }
+
+    &__text {
+        position: absolute;
+        bottom:0;
+        left:50%;
+        transform:translateX(-50%);
+        color:$white;
+        text-align: center;
+        margin-top:60px;
+    }
+
+    &__title {
+        font-size:60px;
+        font-weight: bold;
+        color:$orange_default;
+    }
+
+    &__btn {
+        border:solid 2px;
+        padding:10px 30px;
+        font-size:26px;
+        text-transform: uppercase;
+        transition:all 500ms;
+
+        &:hover {
+            background-color:$orange_default;
+            border-color: transparent;
+            cursor: pointer;
+        }
+    }
+}
+
+
 .aboutus {
     
     &__flex:first-child {
