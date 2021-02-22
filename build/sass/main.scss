@@ -2,44 +2,31 @@
 @import 'colors.scss';
 
 .aboutus {
-    // &__flex:first-child {
-    //     flex-basis: 544px;
-    // }
-
     &__flex:last-child {
         flex-shrink: 0;
     }
     
     &__container {
-        width: 320px;
+        width: 300px;
         margin: 0 auto;
+        padding:0 10px;
         // justify-content: space-around;
         display: grid;
         grid-template-columns:auto;
         grid-template-rows: 100px;
         justify-content: space-around;
         grid-column-gap: 100px;
+    }
 
-
-        @media (min-width:$tablete) and (max-width:$desktop) {
-            width: 600px;
-        }
-
-        @media (min-width:$desktop + 1px) and (max-width:$tablete_dektop) {
-            width: 990px;
-            grid-template-columns: auto auto;
-        }
-
-        @media (min-width:$tablete_dektop + 1px) and (max-width:$monitor) {
-            width: 1200px;
-        }
+    &__banner {
     }
 
     &__title {
-        font-size:48px;
+        font-size:20px;
         color:$blue_default;
         font-weight:600;
         position: relative;
+        padding-left:10px;
         
         &::before {
             content: '';
@@ -48,7 +35,7 @@
             height: calc(100% + 30px);
             background-color: #1e324a;
             position: absolute;
-            left: -30px; 
+            left:-5px;
         }
     }
 
@@ -68,7 +55,45 @@
        line-height: 1.4em; 
         
        &:first-of-type {
-           margin-top:80px;
+           margin-top:20px;
        }
+    }
+
+
+    @media (min-width:$tablete) and (max-width:$desktop) {
+        &__title {
+            font-size:30px;
+        }
+
+        &__container {
+            width: 600px;
+        }
+    }
+
+    @media (min-width:$desktop + 1px) and (max-width:$tablete_dektop) {
+        &__container {
+            width: 990px;
+        }
+    }
+
+    @media (min-width:$desktop + 1px) and (max-width:$monitor) {
+        &__title {
+            font-size:48px;
+        }
+
+        &__container {
+            grid-template-columns: auto auto;
+        }
+
+        &__paragrafo:first-of-type {
+            margin-top:80px;
+        }
+         
+    }
+
+    @media (min-width:$tablete_dektop + 1px) and (max-width:$monitor) {
+        &__container {
+            width: 1200px;
+        }
     }
 }
