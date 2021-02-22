@@ -2,21 +2,37 @@
 @import 'colors.scss';
 
 .aboutus {
-    
-    &__flex:first-child {
-        flex-basis: 544px;
-    }
+    // &__flex:first-child {
+    //     flex-basis: 544px;
+    // }
 
     &__flex:last-child {
         flex-shrink: 0;
     }
     
     &__container {
-        width: 1200px;
+        width: 320px;
         margin: 0 auto;
+        // justify-content: space-around;
+        display: grid;
+        grid-template-columns:auto;
+        grid-template-rows: 100px;
         justify-content: space-around;
-        display: flex;
-        align-items: center;
+        grid-column-gap: 100px;
+
+
+        @media (min-width:$tablete) and (max-width:$desktop) {
+            width: 600px;
+        }
+
+        @media (min-width:$desktop + 1px) and (max-width:$tablete_dektop) {
+            width: 990px;
+            grid-template-columns: auto auto;
+        }
+
+        @media (min-width:$tablete_dektop + 1px) and (max-width:$monitor) {
+            width: 1200px;
+        }
     }
 
     &__title {

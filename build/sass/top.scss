@@ -3,9 +3,6 @@
 .top {
     background-color:$blue_default;
     color:$white;
-    position: absolute;
-    width: 100%;
-
 
     // Mobile
     @media (max-width:$desktop) {
