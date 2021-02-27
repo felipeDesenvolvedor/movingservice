@@ -10,10 +10,8 @@
         width: 300px;
         margin: 0 auto;
         padding:0 10px;
-        // justify-content: space-around;
         display: grid;
         grid-template-columns:auto;
-        grid-template-rows: 100px;
         justify-content: space-around;
         grid-column-gap: 100px;
     }
