@@ -18,7 +18,7 @@
     }
 
     &__item &__icon {
-        background-color:red;
+        background-color:$orange_default;
     }
 
     &__item {
@@ -26,7 +26,7 @@
         display:flex;
 
         &:nth-child(3n + 1) .service__icon{
-            background-color:$blue_default;
+            background-color:$blue_light;
         }
     }
 
