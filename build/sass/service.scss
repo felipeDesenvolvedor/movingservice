@@ -1,0 +1,62 @@
+@import './partial.scss';
+@import './colors.scss';
+
+
+.service {
+    &__container {
+        background-color:$blue_default;
+    }
+
+    &__box {
+        margin:0 auto;
+        padding:50px;
+        
+        // Grid
+        display:grid;
+        grid-template:auto auto / auto auto;
+        gap:30px;
+    }
+
+    &__item &__icon {
+        background-color:red;
+    }
+
+    &__item {
+        background-color:$white;
+        display:flex;
+
+        &:nth-child(3n + 1) .service__icon{
+            background-color:$blue_default;
+        }
+    }
+
+    &__icon,
+    &__data {
+        width: 50%;
+        margin:20px;
+    }
+
+  @media (min-width:$mobile) and (max-width:$tablete) {
+    &__box {
+        width:320px;
+    }
+  }
+  
+  @media (min-width:$tablete + 1) and (max-width:$desktop) {
+    &__box {
+        width:600px;
+    }
+  }
+
+  @media (min-width:$desktop + 1) and (max-width:$tablete_dektop) {
+   &__box {
+     width:990px;
+   }
+  }
+  
+  @media (min-width:$tablete_dektop + 1) and (max-width:$monitor) {
+    &__box {
+        width:1200px;
+    }
+  }
+}
