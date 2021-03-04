@@ -13,11 +13,19 @@
 
   &__box {
     margin:0 auto;
+    padding-top:50px;
 
     // Grid
     display:grid;
     grid-template:auto / auto;
     gap:40px;
+    grid-template-areas: 
+    "title"
+    "boxOne"
+    "boxTwo"
+    "boxThree"
+    "boxFour"
+    ;
 
     .service {
       &__data {
@@ -49,6 +57,22 @@
     }
   }
 
+  &__box > &__title {
+    font-size:3em;
+    color:$white;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content:'';
+      height: 100px;
+      width: 10px;
+      margin-right: 10px;
+      background-color:$white;
+      display: inline-block;
+    }
+  }
+
   &__item {
       background-color:$white;
       display:flex;
@@ -67,16 +91,36 @@
         fill:$white;
       }
 
-      &:nth-child(1n + 2) {
+      &:nth-child(1n + 3) {
         color:$orange_default;
       }
 
-      &:nth-child(3n + 1) {
+      &:nth-child(3n + 2) {
         color:$blue_light;
 
         .service__icon{
           background-color:$blue_light;
         }
+      }
+
+      &:nth-child(1) {
+        grid-area:title;
+      }
+  
+      &:nth-child(2) {
+        grid-area:boxOne;
+      }
+  
+      &:nth-child(3) {
+        grid-area:boxTwo;
+      }
+  
+      &:nth-child(4) {
+        grid-area:boxThree;
+      }
+  
+      &:nth-child(5) {
+        grid-area:boxFour;
       }
   }
 
@@ -95,17 +139,21 @@
     }
   }  
 
-  @media (min-width:665px) {
+  @media (min-width:665px) and (max-width:990px) {
     &__box {
       width: 600px;
     }
   }  
 
-
   @media (min-width:$desktop) {
     &__box {
       padding:50px;
       grid-template:auto auto / auto auto;
+      grid-template-areas: 
+      "title title"
+      "boxOne boxTwo"
+      "boxThree boxFour"
+      ;
     }
   }
 
